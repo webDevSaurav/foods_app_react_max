@@ -1,11 +1,12 @@
+import React, { Fragment } from "react";
 import Header from "./components/Layout/Header";
 
 function App() {
   return (
-    <div>
+    <Fragment>
+      {/* Header with tollbar and hero img */}
       <Header />
-      <h2>Let's get started!</h2>
-    </div>
+    </Fragment>
   );
 }
 
