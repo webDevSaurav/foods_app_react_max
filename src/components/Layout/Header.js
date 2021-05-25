@@ -9,13 +9,13 @@ import styles from "./Header.module.css";
 //components import
 import HeaderCartButton from "./HeaderCartButton";
 
-const Header = () => {
+const Header = ({ onCartHandler }) => {
   return (
     <Fragment>
       {/* Toolbar */}
       <header className={styles.header}>
         <h1>ReactMeals</h1>
-        <HeaderCartButton />
+        <HeaderCartButton onCartHandler={onCartHandler} />
       </header>
       {/*Hero Image */}
       <div className={styles["main-image"]}>

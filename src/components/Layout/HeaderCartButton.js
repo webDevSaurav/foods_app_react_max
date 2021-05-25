@@ -7,9 +7,9 @@ import styles from "./HeaderCartButton.module.css";
 import CartIcon from "../Cart/CartIcon"; //svg icon
 import classes from "./HeaderCartButton.module.css";
 
-const HeaderCartButton = () => {
+const HeaderCartButton = ({ onCartHandler }) => {
   return (
-    <button className={styles.button}>
+    <button className={styles.button} onClick={onCartHandler}>
       <span className={styles.icon}>
         <CartIcon />
       </span>
