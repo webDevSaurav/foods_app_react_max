@@ -5,6 +5,7 @@ import styles from "./AvilableMeals.module.css";
 
 //components
 import Card from "../UI/Card";
+import MealItem from "./MealItem/MealItem";
 
 const DUMMY_MEALS = [
   {
@@ -33,15 +34,25 @@ const DUMMY_MEALS = [
   },
 ];
 
+//create a list of meals
 const AvilableMeals = () => {
   const mealsList = DUMMY_MEALS.map((meal) => {
-    return <li>{meal.name}</li>;
+    return (
+      <MealItem
+        key={meal.id}
+        name={meal.name}
+        price={meal.price}
+        description={meal.description}
+      />
+    );
   });
 
   return (
-    <Card className={styles.meals}>
-      <ul>{mealsList}</ul>
-    </Card>
+    <section className={styles.meals}>
+      <Card>
+        <ul>{mealsList}</ul>
+      </Card>
+    </section>
   );
 };
 
