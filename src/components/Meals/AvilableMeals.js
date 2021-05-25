@@ -3,6 +3,9 @@ import React from "react";
 //import css
 import styles from "./AvilableMeals.module.css";
 
+//components
+import Card from "../UI/Card";
+
 const DUMMY_MEALS = [
   {
     id: "m1",
@@ -36,9 +39,9 @@ const AvilableMeals = () => {
   });
 
   return (
-    <section className={styles.meals}>
+    <Card className={styles.meals}>
       <ul>{mealsList}</ul>
-    </section>
+    </Card>
   );
 };
 
